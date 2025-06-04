@@ -4,15 +4,11 @@ class App {
     this.initRange();
     this.showHideLicense();
     this.initSlider();
-    this.afterVideoPlay();
-    this.onButtonPlay();
     this.showHide()
   }
 
   constructor() {
-    this.iframe = document.querySelector('iframe');
-    this.player = new Vimeo.Player(this.iframe);
-    this.btnPlay = document.querySelector('#button-play')
+
   }
 
   initMobileMenu() {
@@ -150,25 +146,6 @@ class App {
     })
   }
 
-  afterVideoPlay() {
-    const vidoWrapper = document.querySelector('.promo__video')
-
-    const onPlay = () => {
-      vidoWrapper.style.borderRadius = 'unset';
-      this.btnPlay.style.display = 'none'
-    };
-
-    this.player.on('play', onPlay);
-  }
-
-  onButtonPlay() {
-    const playVideo = () => {
-      this.player.play()
-      this.btnPlay.style.display = 'none'
-    }
-
-    this.btnPlay.addEventListener('click', playVideo);
-  }
 
     showHide() {
     document.querySelectorAll('.faq__container').forEach(container => {

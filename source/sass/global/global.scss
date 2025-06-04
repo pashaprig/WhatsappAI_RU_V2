@@ -51,17 +51,19 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  min-width: 250px;
-  padding: 10px;
+  padding: 10px 20px;
   color: $basic-white;
   background-color: $main-color;
-  font-family: "Arial", sans-serif;
+  font-family: "Lato", "Arial", sans-serif;
   font-weight: 400;
-  font-size: 20px;
-  border-radius: 10px;
+  font-size: 18px;
   border: none;
+  border-radius: 29px;
+  background: linear-gradient(334deg, #7FB800 -9.84%, #0F9B0F 121.28%);
+  box-shadow: 0px 4px 15px 0px rgba(127, 184, 0, 0.40);
 
   &:hover {
+    background: 0;
     background-color: $btn-hover;
   }
 
@@ -93,5 +95,21 @@ button {
 
   @media (max-width: $tablet-width) {
     font-size: 24px;
+  }
+}
+
+.desktop-only {
+  display: flex;
+
+  @media (max-width: $tablet-width) {
+    display: none;
+  }
+}
+
+.mobile-only {
+  display: none;
+
+  @media (max-width: $tablet-width) {
+    display: flex;
   }
 }

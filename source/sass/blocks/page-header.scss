@@ -3,14 +3,14 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .page-header__img {
   @media (max-width: $tablet-width) {
     z-index: 3;
     position: relative;
-    width: 109px;
-    height: 38px;
+    margin-top: 15px;
   }
 }
 
