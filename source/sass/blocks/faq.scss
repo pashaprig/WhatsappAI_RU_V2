@@ -1,0 +1,74 @@
+.faq {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 120px;
+  background: no-repeat 0% 37px url("../img/bcg/faq-bcg.webp");
+
+  @media (max-width: $tablet-width) {
+    background: 0;
+    padding: 36px 16px;
+  }
+}
+
+.faq__heading {
+  margin-bottom: 36px;
+}
+
+.faq__container {
+  box-sizing: border-box;
+  width: 100%;
+  margin-bottom: 16px;
+  padding: 24px;
+  border-radius: 20px;
+  background: linear-gradient(0deg, #f7f7fd 0%, #f7f7fd 100%), #f4f4f4;
+
+  &:last-of-type {
+    margin-bottom: 36px;
+  }
+}
+
+.faq__btn-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.faq__question {
+  font-size: 25px;
+
+  @media (max-width: $tablet-width) {
+    font-size: 20px;
+  }
+}
+
+.faq__dropdown {
+  overflow: hidden;
+}
+
+.faq__dropdown-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: all 0.5s ease-in-out;
+  padding: 0;
+}
+
+.faq__dropdown-content.show {
+  max-height: 350px;
+  padding: 10px 0;
+}
+
+.faq__toggle-btn {
+  padding: 10px;
+  background: 0;
+  border: 0;
+
+  svg {
+    transform: rotate(90deg);
+    transition: all 0.5s ease-in-out;
+  }
+
+  &.show > svg {
+    transform: rotate(-90deg);
+    transition: all 0.5s ease-in-out;
+  }
+}

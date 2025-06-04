@@ -1,0 +1,59 @@
+.form {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 300px;
+
+  &--bottom {
+    .btn {
+      max-width: 242px;
+      margin: 0 auto;
+    }
+  }
+
+  @media (max-width: $tablet-width) {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+}
+
+input {
+  box-sizing: border-box;
+  max-height: 45px;
+  padding: 22px 10px;
+  font-size: 15px;
+  font-weight: 400;
+  color: $input-color;
+  border-radius: 4px;
+  border: 1px solid $input-border;
+}
+
+.form_message.error.inactive {
+  display: none;
+}
+
+.form_message.error.active {
+  display: block;
+  color: #0a0a0a;
+}
+
+.error {
+  color: #831B1B;
+  border-color: #831B1B !important;
+}
+
+label.error {
+  margin-top: -25px;
+  text-align: right;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+#phone1-error,
+#phone2-error {
+  display: flex;
+  justify-content: end;
+  margin-top: 5px;
+}

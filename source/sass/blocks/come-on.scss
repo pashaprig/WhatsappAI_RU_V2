@@ -1,0 +1,24 @@
+.come-on {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 50px;
+  padding-bottom: 50px;
+  color: $basic-white;
+  background: $main-color no-repeat 100% 100% url("../img/bcg/come-on-bcg.png");
+  background-size: contain;
+
+  @media (max-width: $tablet-width) {
+    background: $main-color no-repeat 10% 100% url("../img/bcg/come-on-bcg.png");
+    background-size: cover;
+
+    .come-on__heading,
+    .come-on__about {
+      text-align: center;
+    }
+  }
+}
+
+.come-on__about {
+  margin-bottom: 40px;
+}

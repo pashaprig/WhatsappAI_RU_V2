@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Halyk Bank</title>
+  <meta name="description" content="description">
+  <link rel="stylesheet" href="css/style.min.css">
+  <!-- https://realfavicongenerator.net/ -->
+  <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
+  <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
+  <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
+  <link rel="shortcut icon" href="img/favicon/favicon.ico" />
+  <link rel="manifest" href="site.webmanifest" />
+
+</head>
+
+<body class="page-body">
+  <header class="page-header container">
+    <picture>
+      <source type="image/webp" srcset="img/img/logo.webp">
+      <img width="182" height="64" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk Bank">
+    </picture>
+    <nav class="main-nav main-nav--closed main-nav--nojs">
+      <ul class="main-nav__list">
+        <li class="main-nav__item main-nav__item--shadow"></li>
+        <li class="main-nav__item"><a href="#calculator">Калькулятор</a></li>
+        <li class="main-nav__item"><a href="#about-bank">Halyk Bank</a></li>
+        <li class="main-nav__item"><a href="#license">Лицензия</a></li>
+        <li class="main-nav__item"><a href="#start">Инвестирование</a></li>
+        <li class="main-nav__item"><a href="#review">Отзывы</a></li>
+      </ul>
+      <a class="btn mobile-only" href="#leadform1">Присоединиться к проекту</a>
+      <button class="main-nav__toggle" type="button">
+        <span class="main-nav__open-btn-text visually-hidden">Mеню</span>
+      </button>
+    </nav>
+  </header>
+  <main>
+    <section class="promo">
+      <div class="promo__wrapper">
+        <h1 class="promo__heading heading">Получай дивиденды от <span>150&nbsp;000&nbsp;₸</span> в неделю</h1>
+        <p class="promo__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
+          Казахстане.</p>
+        <form action="#" class="form" method="POST" id="leadform1">
+          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+          <input type="email" name="email" id="email" placeholder="Эл. адрес">
+          <input type="tel" name="phone1" placeholder="" id="phone1" />
+          <input id="realPhone1" class="hidden-phone" type="hidden" name="phone" value="" />
+          <input type="hidden" name="currency" value="usd">
+          <input id="country1" type="hidden" name="country" value="ru">
+          <input type="hidden" name="comment" class="comment" value="">
+          <input type="hidden" name="campaign_name" value="">
+          <button class="btn submit_btn" type="submit">
+            <span>Отправить заявку</span>
+          </button>
+          <div class="form_message error inactive"
+            style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
+          </div>
+        </form>
+      </div>
+
+      <div class="promo__wrapper  promo__wrapper--mw53">
+        <div class="promo__video-bcg">
+          <div class="promo__video">
+            <button type="button" id="button-play">
+              <svg width="38" height="44">
+                <use xlink:href="img/sprite.svg#play"></use>
+              </svg>
+            </button>
+            <div style="padding:56.25% 0 0 0;position:relative;">
+              <iframe
+                src="https://player.vimeo.com/video/833805934?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&"
+                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Yandex_land">
+              </iframe>
+            </div>
+            <script src="https://player.vimeo.com/api/player.js"></script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="calculator container" id="calculator">
+      <div class="calculator__wrapper">
+        <h2 class="profit__heading heading heading--small">Калькулятор</h2>
+        <p class="calculator__about">Просчитайте ваш доход всего за пару минут</p>
+      </div>
+
+      <div class="calculator__wrapper">
+        <div class="profit__wrapper">
+          <div class="calculator__range">
+            <div class="profit__sum">
+              <label class="">Сколько хотите заработать?</label>
+              <h3 class="" id="calcResult"></h3>
+            </div>
+            <input type="text" class="js-range-slider" name="my_range" value="150" />
+            <p>Выберите срок инвестирования</p>
+            <input type="text" class="js-range-slider2" name="my_range2" value="150" />
+            <div class="profit__amount">
+              <label class="">Сумма инвестирования</label>
+              <span class="heading" id="profitValue">50000 ₸</span>
+            </div>
+            <a href="#leadform1" class="btn">Отправить заявку</a>
+            <p class="calculator__att">Предварительный расчет. Не является публичной офертой</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="license container" id="license">
+      <div class="license__gradient"></div>
+      <div class="license__wrapper">
+        <h2 class="license__heading heading">Лицензия на использование Halyk Bank в&nbsp;биржевой деятельности
+        </h2>
+        <picture>
+          <source type="image/webp" srcset="img/img/license.webp">
+          <img class="license__img" src="img/img/license.jpg" height="389" width="275" alt="Лицензия">
+        </picture>
+
+        <button class="btn" data-open-modal>
+          <svg width="74" height="56">
+            <use xlink:href="img/sprite.svg#arrow"></use>
+          </svg>
+          <span>Развернуть лицензию</span>
+        </button>
+
+        <dialog data-modal class="license__dialog">
+          <div class="license__dialog-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/img/license.webp">
+              <img class="license__img" src="img/img/license.jpg" height="942" width="666" alt="Лицензия">
+            </picture>
+            <button data-close-modal><span class="main-nav__open-btn-text visually-hidden">Закрыть</span></button>
+          </div>
+        </dialog>
+      </div>
+    </section>
+
+    <section class="review container" id="review">
+      <h2 class="review__heading heading">Отзывы наших клиентов</h2>
+      <p class="review__about">Halyk банк задуман как финансовый актив и нативный расчетный инструмент в блокчейн сети
+        Сбербанка - крупнейшего банка Казахстана. По итогам 2019 года у «Halyk Bank» 96,2 млн активных частных клиентов
+        и 2,6 млн активных корпоративных клиентов, именно в этом году было принято запустить свою криптовалюту.</p>
+      <div class="slider">
+        <div class="review__card slider__item">
+          <div class="review__avatae-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/avatars/latif.webp">
+              <img width="60" height="60" class="review__img" src="img/avatars/latif.jpg" alt="Пірәліұлы Латиф">
+            </picture>
+            <div class="review__name-wrapper">
+              <cite>Пірәліұлы Латиф</cite>
+              <span class="review__nik">@Butterbean</span>
+            </div>
+          </div>
+          <blockquote class="review__blockquote">Проект помог мне выбраться из финансовой ямы во время карантина
+            и действительно изменил мою жизнь!</blockquote>
+          <p class="review__time">23:02| Май 23,2023</p>
+        </div>
+
+        <div class="review__card slider__item">
+          <div class="review__avatae-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/avatars/ismetuly.webp">
+              <img width="60" height="60" class="review__img" src="img/avatars/ismetuly.jpg" alt="Ісметұлы Латиф">
+            </picture>
+            <div class="review__name-wrapper">
+              <cite>Ісметұлы Латиф</cite>
+              <span class="review__nik">@Gamethe</span>
+            </div>
+          </div>
+          <blockquote class="review__blockquote">Решил попробовать себя в роли инвестора на проекте. Не имея опыта, я
+            сразу влился в процесс и начал зарабатывать 500 евро </blockquote>
+          <p class="review__time">13:33| Февраль 12,2023</p>
+        </div>
+
+        <div class="review__card slider__item">
+          <div class="review__avatae-wrapper">
+            <picture>
+              <source type="image/webp" srcset="img/avatars/damen.webp">
+              <img width="60" height="60" class="review__img" src="img/avatars/damen.jpg" alt="Ошақбайұлы Дәмен">
+            </picture>
+            <div class="review__name-wrapper">
+              <cite>Ошақбайұлы Дәмен</cite>
+              <span class="review__nik">@Ckyliу453</span>
+            </div>
+          </div>
+          <blockquote class="review__blockquote">Проект — реальная возможность обеспечить себе достойную жизнь.Очень
+            удобно и легко — всем советую.</blockquote>
+          <p class="review__time">18:37| Март 1,2023</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="come-on container">
+      <h2 class="come-on__heading heading">Получай дивиденды от 150 000 ₸ в неделю</h2>
+      <p class="come-on__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
+        Казахстане.</p>
+
+      <form class="form" action="{form}" aria-form-type="userData" id="modalForm">
+        <input type="text" name="firstName" required />
+        <input type="text" name="lastName" required />
+        <input type="email" name="email" placeholder="Email" required />
+        <input type="tel" id="phone1" name="phone1" required />
+
+        <input name="currency" value="ILS" type="hidden" />
+
+        <button class="btn submit_btn" type="submit">
+          REGISTER NOW
+        </button>
+
+        <div class="form_message error inactive"
+          style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
+        </div>
+      </form>
+    </section>
+
+    <section class="faq" id="faq">
+      <h2 class="faq__heading heading">Ответы на вопросы будущих инвесторов</h2>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Как начать использовать платформу DeepSeek V3 Trader?</p>
+          <button class="faq__toggle-btn show">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content show">
+            <p>Для начала вам нужно зарегистрироваться на нашем сайте и внести первоначальный депозит от 250 долларов.
+              Затем вы получите доступ к нашей торговой платформе и сможете начать использовать наши инструменты для
+              инвестирования.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Каковы минимальные требования к депозиту?</p>
+          <button class="faq__toggle-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content">
+            <p>Минимальный депозит для начала инвестирования составляет 250 долларов. Эта сумма необходима для
+              эффективной работы алгоритмов платформы, обеспечения диверсификации активов и стабильной доходности. Такой
+              порог позволяет оптимально распределять инвестиции, минимизировать риски и использовать потенциал
+              искусственного интеллекта для максимальной эффективности управления капиталом.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Как обеспечивается безопасность моих средств?</p>
+          <button class="faq__toggle-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content">
+            <p>Мы используем передовые технологии шифрования для защиты ваших средств и личных данных. Кроме того, мы
+              соблюдаем строгие стандарты безопасности и регулярно аудитируемся.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Как мы поддерживаем наших клиентов?</p>
+          <button class="faq__toggle-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content">
+            <p>Мы всегда на связи! Наша служба поддержки работает круглосуточно, и вы можете обратиться к нам через
+              электронную почту, онлайн-чат или телефон. Мы оперативно отвечаем на вопросы, помогаем разобраться в
+              работе платформы и решаем любые возникающие задачи.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="page-footer container">
+    <div class="page-footer__wrapper">
+      <picture>
+        <source type="image/webp" srcset="img/img/logo.webp">
+        <img width="182" height="64" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk Bank">
+      </picture>
+      <p class="page-footer__year">© 2004 - 2023 Halyk Bank</p>
+      <a href="#leadform1" class="page-footer__polycy">Политика конфиденциальности</a>
+      <a href="#leadform1" class="page-footer__polycy">Правила использования</a>
+    </div>
+    <nav class="page-footer__wrapper">
+      <ul class="main-nav__list">
+        <li class="main-nav__item"><a href="#bank">Преимущества</a></li>
+        <li class="main-nav__item"><a href="#calculator">Калькулятор</a></li>
+        <li class="main-nav__item"><a href="#about-bank">Halyk Bank</a></li>
+        <li class="main-nav__item"><a href="#license">Лицензия</a></li>
+        <li class="main-nav__item"><a href="#start">Инвестирование</a></li>
+        <li class="main-nav__item"><a href="#review">Отзывы</a></li>
+      </ul>
+    </nav>
+  </footer>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/ion.rangeSlider.min.js"></script>
+  <script src="js/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
