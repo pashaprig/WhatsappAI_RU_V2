@@ -59,17 +59,21 @@ button {
   font-size: 18px;
   border: none;
   border-radius: 29px;
-  background: linear-gradient(334deg, #7FB800 -9.84%, #0F9B0F 121.28%);
-  box-shadow: 0px 4px 15px 0px rgba(127, 184, 0, 0.40);
+  background: linear-gradient(334deg, #7fb800 -9.84%, #0f9b0f 121.28%);
+  box-shadow: 0px 4px 15px 0px rgba(127, 184, 0, 0.4);
 
   &:hover {
-    background: 0;
-    background-color: $btn-hover;
+    background: $btn-hover;
   }
 
   &:active {
     opacity: 0.8;
   }
+
+  &--reverse {
+    background: $main2-color;
+  }
+
 }
 
 .container {
@@ -83,18 +87,16 @@ button {
 }
 
 .heading {
-  margin-bottom: 30px;
-  font-family: "Montserrat", "Arial", sans-serif;
-  font-size: 48px;
-  font-weight: 400;
-
-  &--small {
-    margin-bottom: 25px;
-    font-size: 36px;
-  }
+  font-family: "Rubik", "Arial", sans-serif;
+  font-size: 60px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 76px;
+  color: $nav-hover;
 
   @media (max-width: $tablet-width) {
-    font-size: 24px;
+    font-size: 38px;
+    line-height: 54px;
   }
 }
 
@@ -112,4 +114,8 @@ button {
   @media (max-width: $tablet-width) {
     display: flex;
   }
+}
+
+.rubik {
+  font-family: "Rubik", "Arial", sans-serif;
 }

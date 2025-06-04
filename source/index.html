@@ -39,7 +39,7 @@
 
       <section class="promo">
         <div class="promo__wrapper">
-          <div class="promo__logo-wrapper">
+          <div class="promo__logo-wrapper rubik">
             <span class="promo__logo">
               <svg width="40" height="40">
                 <use xlink:href="img/sprite.svg#wa"></use>
@@ -47,29 +47,25 @@
             </span>
             <span>Official WhatsApp project</span>
           </div>
-          <h1 class="promo__heading heading"><span>WHATSAPP AI™ </span><br>Ваш путь к<br>автоматическим<br>инвестициям</h1>
-          <p class="promo__about">Новый уровень дохода благодаря искусственному интеллекту и автоматической торговле акциями через WhatsApp.</p>
+          <h1 class="promo__heading heading"><span>WHATSAPP AI™ </span><br>Ваш путь к<br>автоматическим<br>инвестициям
+          </h1>
+          <p class="promo__about">Новый уровень дохода благодаря искусственному интеллекту и автоматической торговле
+            акциями через WhatsApp.</p>
         </div>
         <div class="promo__wrapper">
           <form class="form" action="<?=$form;?>" aria-form-type="userData">
-            <div class="form-group">
+            <div class="form__heading-wrapper">
+              <h2 class="form__heading heading">Оставьте заявку и выйдите на связь с менеджером</h2>
+              <p class="form__about">Минимальный депозит для работы платформы: 250$</p>
+            </div>
+            <div class="form__group">
               <input type="text" name="firstName" class="form-input" required />
               <input type="text" name="lastName" class="form-input" required />
               <input type="email" name="email" placeholder="Email" class="form-input" required />
               <input type="tel" id="phone1" name="phone1" class="form-input form-input-phone" required />
-
-              <label class="form__checkbox">
-                <input type="checkbox" name="policy" id="" checked="checked">
-                <span>I agree to <a target="_blank" href="<?= setUrlPage('legal'); ?>">Privacy Policy</a>.</span>
-              </label>
-
-              <label class="form__checkbox">
-                <input type="checkbox" name="terms" id="" checked="checked">
-                <span>I am over 18 years</span>
-              </label>
             </div>
 
-            <button class="submit_btn" type="submit">Register</button>
+            <button class="btn btn--reverse submit_btn" type="submit">Проверить доступ</button>
 
             <div class="form_message error inactive"
               style="margin:15px auto;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
