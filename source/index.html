@@ -4,83 +4,85 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Halyk Bank</title>
-  <meta name="description" content="description">
+  <title>WHATSAPP AI</title>
+  <meta name="description"
+    content="Это инновационная платформа, объединяющая автоматическую торговлю акциями и удобство общения в WhatsApp.">
   <link rel="stylesheet" href="css/style.min.css">
   <!-- https://realfavicongenerator.net/ -->
   <link rel="icon" type="image/png" href="img/favicon/favicon-96x96.png" sizes="96x96" />
   <link rel="icon" type="image/svg+xml" href="img/favicon/favicon.svg" />
   <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png" />
-  <link rel="shortcut icon" href="img/favicon/favicon.ico" />
   <link rel="manifest" href="site.webmanifest" />
 
 </head>
 
 <body class="page-body">
-  <header class="page-header container">
-    <picture>
-      <source type="image/webp" srcset="img/img/logo.webp">
-      <img width="182" height="64" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk Bank">
-    </picture>
-    <nav class="main-nav main-nav--closed main-nav--nojs">
-      <ul class="main-nav__list">
-        <li class="main-nav__item main-nav__item--shadow"></li>
-        <li class="main-nav__item"><a href="#calculator">Калькулятор</a></li>
-        <li class="main-nav__item"><a href="#about-bank">Halyk Bank</a></li>
-        <li class="main-nav__item"><a href="#license">Лицензия</a></li>
-        <li class="main-nav__item"><a href="#start">Инвестирование</a></li>
-        <li class="main-nav__item"><a href="#review">Отзывы</a></li>
-      </ul>
-      <a class="btn mobile-only" href="#leadform1">Присоединиться к проекту</a>
-      <button class="main-nav__toggle" type="button">
-        <span class="main-nav__open-btn-text visually-hidden">Mеню</span>
-      </button>
-    </nav>
-  </header>
   <main>
-    <section class="promo">
-      <div class="promo__wrapper">
-        <h1 class="promo__heading heading">Получай дивиденды от <span>150&nbsp;000&nbsp;₸</span> в неделю</h1>
-        <p class="promo__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
-          Казахстане.</p>
-        <form action="#" class="form" method="POST" id="leadform1">
-          <input type="text" name="name" id="name" placeholder="Имя Фамилия">
-          <input type="email" name="email" id="email" placeholder="Эл. адрес">
-          <input type="tel" name="phone1" placeholder="" id="phone1" />
-          <input id="realPhone1" class="hidden-phone" type="hidden" name="phone" value="" />
-          <input type="hidden" name="currency" value="usd">
-          <input id="country1" type="hidden" name="country" value="ru">
-          <input type="hidden" name="comment" class="comment" value="">
-          <input type="hidden" name="campaign_name" value="">
-          <button class="btn submit_btn" type="submit">
-            <span>Отправить заявку</span>
+    <div class="header-promo-wrapper container">
+      <header class="page-header ">
+        <picture>
+          <source type="image/webp" srcset="img/img/logo.webp">
+          <img width="226" height="24" class="page-header__img" src="img/img/logo.png" alt="WHATSAPP AI">
+        </picture>
+        <nav class="main-nav main-nav--closed main-nav--nojs">
+          <ul class="main-nav__list">
+            <li class="main-nav__item main-nav__item--shadow"></li>
+            <li class="main-nav__item"><a href="#about">Про платформу</a></li>
+            <li class="main-nav__item"><a href="#deals">Сделки в реальном времени</a></li>
+            <li class="main-nav__item"><a href="#review">Отзывы</a></li>
+            <li class="main-nav__item"><a href="#faq">Ответы на вопросы</a></li>
+          </ul>
+          <a class="btn" href="#leadform1">Проверить доступ</a>
+          <button class="main-nav__toggle" type="button">
+            <span class="main-nav__open-btn-text visually-hidden">Mеню</span>
           </button>
-          <div class="form_message error inactive"
-            style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
-          </div>
-        </form>
-      </div>
+        </nav>
+      </header>
 
-      <div class="promo__wrapper  promo__wrapper--mw53">
-        <div class="promo__video-bcg">
-          <div class="promo__video">
-            <button type="button" id="button-play">
-              <svg width="38" height="44">
-                <use xlink:href="img/sprite.svg#play"></use>
-              </svg>
+      <section class="promo">
+        <div class="promo__wrapper">
+          <h1 class="promo__heading heading">Получай дивиденды от <span>150&nbsp;000&nbsp;₸</span> в неделю</h1>
+          <p class="promo__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
+            Казахстане.</p>
+          <form action="#" class="form" method="POST" id="leadform1">
+            <input type="text" name="name" id="name" placeholder="Имя Фамилия">
+            <input type="email" name="email" id="email" placeholder="Эл. адрес">
+            <input type="tel" name="phone1" placeholder="" id="phone1" />
+            <input id="realPhone1" class="hidden-phone" type="hidden" name="phone" value="" />
+            <input type="hidden" name="currency" value="usd">
+            <input id="country1" type="hidden" name="country" value="ru">
+            <input type="hidden" name="comment" class="comment" value="">
+            <input type="hidden" name="campaign_name" value="">
+            <button class="btn submit_btn" type="submit">
+              <span>Отправить заявку</span>
             </button>
-            <div style="padding:56.25% 0 0 0;position:relative;">
-              <iframe
-                src="https://player.vimeo.com/video/833805934?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&"
-                frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
-                style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Yandex_land">
-              </iframe>
+            <div class="form_message error inactive"
+              style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
             </div>
-            <script src="https://player.vimeo.com/api/player.js"></script>
+          </form>
+        </div>
+
+        <div class="promo__wrapper  promo__wrapper--mw53">
+          <div class="promo__video-bcg">
+            <div class="promo__video">
+              <button type="button" id="button-play">
+                <svg width="38" height="44">
+                  <use xlink:href="img/sprite.svg#play"></use>
+                </svg>
+              </button>
+              <div style="padding:56.25% 0 0 0;position:relative;">
+                <iframe
+                  src="https://player.vimeo.com/video/833805934?badge=0&amp;autopause=0&amp;player_id=0&amp;app_id=58479&loop=1&"
+                  frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen
+                  style="position:absolute;top:0;left:0;width:100%;height:100%;" title="Yandex_land">
+                </iframe>
+              </div>
+              <script src="https://player.vimeo.com/api/player.js"></script>
+            </div>
           </div>
         </div>
-      </div>
-    </section>
+      </section>
+    </div>
 
     <section class="calculator container" id="calculator">
       <div class="calculator__wrapper">

@@ -1,38 +1,81 @@
 /* Fonts */
 
-// Montserrat
-
+/* Lato */
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Lato";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-display: swap;
-  src: local("Montserrat Regular"),
-    url("../fonts/montserrat/Montserrat-Regular400.woff2") format("woff2"),
-    url("../fonts/montserrat/Montserrat-Regular400.woff") format("woff"),
-    url("../fonts/montserrat/Montserrat-Regular400.ttf") format("truetype");
+  src: local("Lato Light"),
+    url("../fonts/lato/Lato-Light.woff2") format("woff2"),
+    url("../fonts/lato/Lato-Light.woff") format("woff"),
+    url("../fonts/lato/Lato-Light.ttf") format("truetype");
 }
 
 @font-face {
-  font-family: "Montserrat";
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Lato Regular"),
+    url("../fonts/lato/Lato-Regular.woff2") format("woff2"),
+    url("../fonts/lato/Lato-Regular.woff") format("woff"),
+    url("../fonts/lato/Lato-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Lato";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Lato Bold"),
+    url("../fonts/lato/Lato-Bold.woff2") format("woff2"),
+    url("../fonts/lato/Lato-Bold.woff") format("woff"),
+    url("../fonts/lato/Lato-Bold.ttf") format("truetype");
+}
+
+/* Rubik */
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local("Rubik Regular"),
+    url("../fonts/rubik/Rubik-Regular.woff2") format("woff2"),
+    url("../fonts/rubik/Rubik-Regular.woff") format("woff"),
+    url("../fonts/rubik/Rubik-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Rubik";
   font-style: normal;
   font-weight: 500;
   font-display: swap;
-  src: local("Montserrat Medium"),
-    url("../fonts/montserrat/Montserrat-Medium500.woff2") format("woff2"),
-    url("../fonts/montserrat/Montserrat-Medium500.woff") format("woff"),
-    url("../fonts/montserrat/Montserrat-Medium500.ttf") format("truetype");
+  src: local("Rubik Medium"),
+    url("../fonts/rubik/Rubik-Medium.woff2") format("woff2"),
+    url("../fonts/rubik/Rubik-Medium.woff") format("woff"),
+    url("../fonts/rubik/Rubik-Medium.ttf") format("truetype");
 }
-
-// Inter
 
 @font-face {
-  font-family: "Inter";
+  font-family: "Rubik";
   font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-display: swap;
-  src: local("Inter Regular"),
-    url("../fonts/inter/Inter-Regular.woff2") format("woff2"),
-    url("../fonts/inter/Inter-Regular.woff") format("woff"),
-    url("../fonts/inter/Inter-Regular.ttf") format("truetype");
+  src: local("Rubik SemiBold"),
+    url("../fonts/rubik/Rubik-SemiBold.woff2") format("woff2"),
+    url("../fonts/rubik/Rubik-SemiBold.woff") format("woff"),
+    url("../fonts/rubik/Rubik-SemiBold.ttf") format("truetype");
 }
+
+@font-face {
+  font-family: "Rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: local("Rubik Bold"),
+    url("../fonts/rubik/Rubik-Bold.woff2") format("woff2"),
+    url("../fonts/rubik/Rubik-Bold.woff") format("woff"),
+    url("../fonts/rubik/Rubik-Bold.ttf") format("truetype");
+}
+
