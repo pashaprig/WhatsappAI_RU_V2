@@ -78,58 +78,35 @@
     </div>
 
     <section class="calculator container" id="calculator">
-      <div class="calculator__wrapper">
-        <h2 class="profit__heading heading heading--small">Калькулятор</h2>
-        <p class="calculator__about">Просчитайте ваш доход всего за пару минут</p>
+      <div class="calculator__text-wrapper">
+        <h2 class="calculator__heading heading">Оцените свой потенциальный доход</h2>
+        <p class="calculator__about">Используйте наш калькулятор доходности, чтобы узнать, какую прибыль вы можете
+          получить. Укажите сумму инвестиций (минимальный депозит – 250 долларов) и срок вложений – и получите
+          прогнозируемый результат. </p>
       </div>
 
       <div class="calculator__wrapper">
         <div class="profit__wrapper">
           <div class="calculator__range">
-            <div class="profit__sum">
-              <label class="">Сколько хотите заработать?</label>
-              <h3 class="" id="calcResult"></h3>
-            </div>
-            <input type="text" class="js-range-slider" name="my_range" value="150" />
-            <p>Выберите срок инвестирования</p>
-            <input type="text" class="js-range-slider2" name="my_range2" value="150" />
-            <div class="profit__amount">
-              <label class="">Сумма инвестирования</label>
-              <span class="heading" id="profitValue">50000 ₸</span>
-            </div>
-            <a href="#leadform1" class="btn">Отправить заявку</a>
-            <p class="calculator__att">Предварительный расчет. Не является публичной офертой</p>
+            <label>Выберите сумму инвестиций</label>
+            <input type="text" class="js-range-slider" name="my_range" value="250">
+
+            <h3 class="calculator__result rubik" id="calcResult">1</h3>
+
+            <label>Выберите длительность инвестиций</label>
+            <input type="text" class="js-range-slider2" name="my_range2" value="2">
+
+            <h3 class="calculator__result rubik" id="calcResult2">2 месяца</h3>
           </div>
         </div>
-      </div>
-    </section>
 
-    <section class="license container" id="license">
-      <div class="license__gradient"></div>
-      <div class="license__wrapper">
-        <h2 class="license__heading heading">Лицензия на использование Halyk Bank в&nbsp;биржевой деятельности
-        </h2>
-        <picture>
-          <source type="image/webp" srcset="img/img/license.webp">
-          <img class="license__img" src="img/img/license.jpg" height="389" width="275" alt="Лицензия">
-        </picture>
-
-        <button class="btn" data-open-modal>
-          <svg width="74" height="56">
-            <use xlink:href="img/sprite.svg#arrow"></use>
-          </svg>
-          <span>Развернуть лицензию</span>
-        </button>
-
-        <dialog data-modal class="license__dialog">
-          <div class="license__dialog-wrapper">
-            <picture>
-              <source type="image/webp" srcset="img/img/license.webp">
-              <img class="license__img" src="img/img/license.jpg" height="942" width="666" alt="Лицензия">
-            </picture>
-            <button data-close-modal><span class="main-nav__open-btn-text visually-hidden">Закрыть</span></button>
-          </div>
-        </dialog>
+        <div class="calculator__potential-wraper">
+          <h3 class="rubik">Ваш потенциальный доход:</h3>
+          <span class="rubik" id="profitValue">$ 3,700</span>
+          <p>Не упустите свой шанс воспользоваться современной системой на основе ИИ та мощностях нефтегазовой отрасли.
+            Заполните форму, свяжитесь с менеджером и начните инвестировать прямо сейчас!</p>
+          <a class="btn" href="#leadform1">Проверить доступ</a>
+        </div>
       </div>
     </section>
 
@@ -189,35 +166,12 @@
       </div>
     </section>
 
-    <section class="come-on container">
-      <h2 class="come-on__heading heading">Получай дивиденды от 150 000 ₸ в неделю</h2>
-      <p class="come-on__about">Стань одним из первых инвесторов, приобретающих акции самого крупного банка в
-        Казахстане.</p>
-
-      <form class="form" action="{form}" aria-form-type="userData" id="modalForm">
-        <input type="text" name="firstName" required />
-        <input type="text" name="lastName" required />
-        <input type="email" name="email" placeholder="Email" required />
-        <input type="tel" id="phone1" name="phone1" required />
-
-        <input name="currency" value="ILS" type="hidden" />
-
-        <button class="btn submit_btn" type="submit">
-          REGISTER NOW
-        </button>
-
-        <div class="form_message error inactive"
-          style="margin:15px 0;background-color: #ffd4d4;border: 2px dashed #ce0909;border-radius: 10px;padding: 20px;max-width: 350px;">
-        </div>
-      </form>
-    </section>
-
     <section class="faq" id="faq">
-      <h2 class="faq__heading heading">Ответы на вопросы будущих инвесторов</h2>
+      <h2 class="faq__heading heading">Ответы на вопросы</h2>
 
-      <div class="faq__container">
+      <div class="faq__container show">
         <div class="faq__btn-wrapper">
-          <p class="faq__question">Как начать использовать платформу DeepSeek V3 Trader?</p>
+          <p class="faq__question">Как начать инвестировать с WhatsApp AI™?</p>
           <button class="faq__toggle-btn show">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#arrow-right"></use>
@@ -226,16 +180,21 @@
         </div>
         <div class="faq__dropdown">
           <div class="faq__dropdown-content show">
-            <p>Для начала вам нужно зарегистрироваться на нашем сайте и внести первоначальный депозит от 250 долларов.
-              Затем вы получите доступ к нашей торговой платформе и сможете начать использовать наши инструменты для
-              инвестирования.</p>
+            <p>Чтобы начать инвестировать и зарабатывать с WhatsApp AI™, выполните всего 3 простых шага:</p>
+            <ol class="faq__list">
+              <li class="faq__item"><b>Оставьте заявку</b> через форму на сайте.</li>
+              <li class="faq__item"><b>Свяжитесь с персональным менеджером</b>, который поможет вам пройти регистрацию.</li>
+              <li class="faq__item"><b>Внесите первый депозит от 250 $</b> — это минимальная сумма для активации торгового
+                алгоритма.</li>
+            </ol>
+            <p>После этого вы сразу получите доступ к платформе и начнёте отслеживать сделки прямо в WhatsApp.</p>
           </div>
         </div>
       </div>
 
       <div class="faq__container">
         <div class="faq__btn-wrapper">
-          <p class="faq__question">Каковы минимальные требования к депозиту?</p>
+          <p class="faq__question">Это безопасно?</p>
           <button class="faq__toggle-btn">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#arrow-right"></use>
@@ -244,17 +203,14 @@
         </div>
         <div class="faq__dropdown">
           <div class="faq__dropdown-content">
-            <p>Минимальный депозит для начала инвестирования составляет 250 долларов. Эта сумма необходима для
-              эффективной работы алгоритмов платформы, обеспечения диверсификации активов и стабильной доходности. Такой
-              порог позволяет оптимально распределять инвестиции, минимизировать риски и использовать потенциал
-              искусственного интеллекта для максимальной эффективности управления капиталом.</p>
+            <p>Да. Платформа работает только с лицензированными активами и использует современные алгоритмы шифрования данных. Все партнёрские брокеры и поставщики ликвидности сертифицированы, а ваш капитал полностью под контролем.</p>
           </div>
         </div>
       </div>
 
       <div class="faq__container">
         <div class="faq__btn-wrapper">
-          <p class="faq__question">Как обеспечивается безопасность моих средств?</p>
+          <p class="faq__question">Сколько времени занимает запуск?</p>
           <button class="faq__toggle-btn">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#arrow-right"></use>
@@ -263,15 +219,15 @@
         </div>
         <div class="faq__dropdown">
           <div class="faq__dropdown-content">
-            <p>Мы используем передовые технологии шифрования для защиты ваших средств и личных данных. Кроме того, мы
-              соблюдаем строгие стандарты безопасности и регулярно аудитируемся.</p>
+            <p>Весь процесс подключения — <b>от 5 до 10 минут</b>. Личный менеджер поможет вам пройти регистрацию, внести депозит и активировать доступ к WhatsApp AI™.</p>
+            <p>Никаких технических знаний или дополнительных приложений — всё работает через привычный вам мессенджер WhatsApp.</p>
           </div>
         </div>
       </div>
 
       <div class="faq__container">
         <div class="faq__btn-wrapper">
-          <p class="faq__question">Как мы поддерживаем наших клиентов?</p>
+          <p class="faq__question">Нужно ли иметь опыт в инвестициях или экономике?</p>
           <button class="faq__toggle-btn">
             <svg width="24" height="24">
               <use xlink:href="img/sprite.svg#arrow-right"></use>
@@ -280,9 +236,65 @@
         </div>
         <div class="faq__dropdown">
           <div class="faq__dropdown-content">
-            <p>Мы всегда на связи! Наша служба поддержки работает круглосуточно, и вы можете обратиться к нам через
-              электронную почту, онлайн-чат или телефон. Мы оперативно отвечаем на вопросы, помогаем разобраться в
-              работе платформы и решаем любые возникающие задачи.</p>
+            <p>Нет, это не требуется. Искусственный интеллект сам:</p>
+            <ul class="faq__list">
+              <li class="faq__item">Анализирует рынок в режиме реального времени,</li>
+              <li class="faq__item">Находит оптимальные сделки,</li>
+              <li class="faq__item">Закрывает их с прибылью.</li>
+            </ul>
+            <p>Вы просто наблюдаете за процессом и фиксируете доход.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Как я получаю прибыль?</p>
+          <button class="faq__toggle-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content">
+            <p>Вы получаете уведомления о каждой успешной сделке, видите ежедневную статистику и отчёты, а также можете в любой момент вывести деньги на свою карту или платёжную систему.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Какие компании доступны для торговли?</p>
+          <button class="faq__toggle-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content">
+            <p>WhatsApp AI™ работает с более чем <b></b>1500+ сертифицированными активами</b>, включая:</p>
+            <ul class="faq__list">
+              <li class="faq__item"><b>Tesla, Google, Microsoft, Amazon, PayPal, Spotify, HP</b> и другие.</li>
+              <li class="faq__item">Все активы лицензированы и прошли проверку соответствующими регулирующими органами.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq__container">
+        <div class="faq__btn-wrapper">
+          <p class="faq__question">Есть ли поддержка?</p>
+          <button class="faq__toggle-btn">
+            <svg width="24" height="24">
+              <use xlink:href="img/sprite.svg#arrow-right"></use>
+            </svg>
+          </button>
+        </div>
+        <div class="faq__dropdown">
+          <div class="faq__dropdown-content">
+            <p>Да. У каждого клиента есть персональный менеджер, который помогает на всех этапах — от подключения до вывода прибыли. Поддержка доступна ежедневно, включая выходные.</p>
           </div>
         </div>
       </div>
@@ -290,30 +302,10 @@
   </main>
 
   <footer class="page-footer container">
-    <div class="page-footer__wrapper">
-      <picture>
-        <source type="image/webp" srcset="img/img/logo.webp">
-        <img width="182" height="64" class="page-header__img" src="img/img/logo.png" alt="Логотип Halyk Bank">
-      </picture>
-      <p class="page-footer__year">© 2004 - 2023 Halyk Bank</p>
-      <a href="#leadform1" class="page-footer__polycy">Политика конфиденциальности</a>
-      <a href="#leadform1" class="page-footer__polycy">Правила использования</a>
-    </div>
-    <nav class="page-footer__wrapper">
-      <ul class="main-nav__list">
-        <li class="main-nav__item"><a href="#bank">Преимущества</a></li>
-        <li class="main-nav__item"><a href="#calculator">Калькулятор</a></li>
-        <li class="main-nav__item"><a href="#about-bank">Halyk Bank</a></li>
-        <li class="main-nav__item"><a href="#license">Лицензия</a></li>
-        <li class="main-nav__item"><a href="#start">Инвестирование</a></li>
-        <li class="main-nav__item"><a href="#review">Отзывы</a></li>
-      </ul>
-    </nav>
-  </footer>
-  <script src="js/jquery.min.js"></script>
-  <script src="js/ion.rangeSlider.min.js"></script>
-  <script src="js/slick.min.js"></script>
-  <script src="js/script.js"></script>
+    <script src="js/jquery.min.js"></script>
+    <script src="js/ion.rangeSlider.min.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>

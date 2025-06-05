@@ -3,12 +3,24 @@
   flex-direction: column;
   align-items: center;
   padding: 120px;
-  background: no-repeat 0% 37px url("../img/bcg/faq-bcg.webp");
+
+  ul {
+    list-style: disc;
+    margin: 0;
+    padding: 10px;
+    padding-left: 20px;
+  }
 
   @media (max-width: $tablet-width) {
     background: 0;
     padding: 36px 16px;
   }
+}
+
+.faq__list {
+  margin: 0;
+  padding: 10px;
+  padding-left: 20px;
 }
 
 .faq__heading {
@@ -21,7 +33,15 @@
   margin-bottom: 16px;
   padding: 24px;
   border-radius: 20px;
-  background: linear-gradient(0deg, #f7f7fd 0%, #f7f7fd 100%), #f4f4f4;
+  border-radius: 14px;
+  border: 2px solid transparent;
+
+  background: #fff;
+  box-shadow: 0px 6px 16px 0px rgba(127, 184, 0, 0.19);
+
+  &.show {
+    border: 2px solid $main-color;
+  }
 
   &:last-of-type {
     margin-bottom: 36px;
@@ -31,13 +51,19 @@
 .faq__btn-wrapper {
   display: flex;
   justify-content: space-between;
+  gap: 15px;
 }
 
 .faq__question {
-  font-size: 25px;
+  font-family: "Rubik", "Arial", sans-serif;
+  color: $nav-hover;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 26px;
 
   @media (max-width: $tablet-width) {
     font-size: 20px;
+    line-height: 22px
   }
 }
 
@@ -50,25 +76,40 @@
   overflow: hidden;
   transition: all 0.5s ease-in-out;
   padding: 0;
+  font-size: 17px;
+  line-height: 28px;
+  font-style: italic;
 }
 
 .faq__dropdown-content.show {
-  max-height: 350px;
+  max-height: 600px;
   padding: 10px 0;
 }
 
 .faq__toggle-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 56px;
+  height: 56px;
   padding: 10px;
   background: 0;
-  border: 0;
+  border-radius: 50%;
+  border: 1px solid $main-color;
 
   svg {
-    transform: rotate(90deg);
-    transition: all 0.5s ease-in-out;
+    fill: $main-color;
+    transform: rotate(0);
+    transition: transform 0.5s ease-in-out;
   }
 
-  &.show > svg {
-    transform: rotate(-90deg);
-    transition: all 0.5s ease-in-out;
+  &.show {
+    background: $main-color;
+
+    & > svg {
+      fill: $basic-white;
+      transform: rotate(-45deg);
+      transition: transform 0.5s ease-in-out;
+    }
   }
 }

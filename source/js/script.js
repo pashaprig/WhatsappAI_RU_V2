@@ -2,14 +2,11 @@ class App {
   init() {
     this.initMobileMenu();
     this.initRange();
-    this.showHideLicense();
     this.initSlider();
     this.showHide()
   }
 
-  constructor() {
-
-  }
+  constructor() {}
 
   initMobileMenu() {
     const navMain = document.querySelector('.main-nav');
@@ -53,72 +50,91 @@ class App {
   }
 
   initRange() {
+    let amount = 1000
+    let month = 2
+    const language = document.documentElement.getAttribute('lang');
+
+    const update = () => {
+      return '$ ' + Math.round(amount * (month * 1.85))
+        .toString()
+        .replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+    };
+
+    function getMonthWord(number) {
+      const language = document.documentElement.getAttribute('lang');
+      const lastDigit = number % 10;
+      const lastTwoDigits = number % 100;
+
+      if (lastTwoDigits >= 11 && lastTwoDigits <= 14) {
+        return language === 'ru' ? 'месяцев' : 'months';
+      }
+
+      switch (lastDigit) {
+        case 1:
+          return language === 'ru' ? 'месяц' : 'month';
+        case 2:
+        case 3:
+        case 4:
+          return language === 'ru' ? 'месяца' : 'months';
+        default:
+          return language === 'ru' ? 'месяцев' : 'months';
+      }
+    }
+    function get1MonthWord(lang) {
+      return lang === 'ru' ? ' месяц' : ' month';
+    }
     $(function () {
       $(".js-range-slider").ionRangeSlider({
         skin: "round",
         hide_min_max: false,
         hide_from_to: true,
-        min: 50000,
-        max: 10000000,
-        from: 18000,
-        postfix: " ₸",
+        min: 250,
+        max: 10000,
+        from: amount,
+        prefix: "$",
         grid: false,
         onStart: function (data) {
-          $("#calcResult").text(data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₸');
+          $("#profitValue").text(update());
+          $("#calcResult").text('$ ' + data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
         },
         onChange: function (data) {
-          $("#profitValue").text(Math.round((data.from * 0.32) + data.from).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₸');
-          $("#calcResult").text(data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₸');
-        },
+          amount = data.from
+          $("#calcResult").text('$ ' + data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " "));
+          $("#profitValue").text(update());
+        }
       });
     });
     $(function () {
       $(".js-range-slider2").ionRangeSlider({
         skin: "round",
         hide_min_max: false,
-        hide_from_to: false,
+        hide_from_to: true,
         min: 1,
-        max: 60,
-        from: 1,
-        postfix: " мес.",
+        max: 12,
+        from: month,
+        postfix: get1MonthWord(language),
         grid: false,
+        onStart: function () {
+          $("#calcResult2").text(2 + ' ' + getMonthWord(2));
+          $("#profitValue").text(update());
+          setTimeout(function () {
+            const slider = document.querySelector(".js-irs-1");
+            if (slider) {
+              const max = slider.querySelector(".irs-max");
+              if (max) {
+                max.textContent = language === 'ru' ? "12 месяцев" : "12 months";
+              }
+            }
+          }, 100);
+        },
         onChange: function (data) {
-          const summValue = document.querySelector('#profitValue')
-          const value = summValue.textContent.slice(0, -1).replace(/ /g, '');
-          summValue.textContent = Math.round(Number(value * 1.02).toFixed(1)).toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ₸';
+          const monthWord = getMonthWord(data.from);
+          month = data.from
+          $("#calcResult2").text(data.from.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ") + ' ' + monthWord);
+          $("#profitValue").text(update());
         },
       });
     });
-  }
-
-  showHideLicense() {
-    const $openBtn = document.querySelector('[data-open-modal]')
-    const $closeBtn = document.querySelector('[data-close-modal]')
-    const $modal = document.querySelector('[data-modal]')
-    const $licenseImg = document.querySelector('.license__img')
-
-    $licenseImg.addEventListener('click', showModal);
-    $openBtn.addEventListener('click', showModal);
-
-    function showModal() {
-      $modal.showModal();
-    }
-
-    $closeBtn.addEventListener('click', () => {
-      $modal.close()
-    })
-
-    $modal.addEventListener('click', e => {
-      const dialogDimentions = $modal.getBoundingClientRect()
-      if (
-        e.clientX < dialogDimentions.left ||
-        e.clientX > dialogDimentions.right ||
-        e.clientY < dialogDimentions.top ||
-        e.clientY > dialogDimentions.bottom
-      ) {
-        $modal.close()
-      }
-    })
   }
 
   initSlider() {
@@ -153,6 +169,7 @@ class App {
       const content = container.querySelector('.faq__dropdown-content');
 
       button.addEventListener('click', function () {
+        container.classList.toggle('show');
         content.classList.toggle('show');
         button.classList.toggle('show');
       });
