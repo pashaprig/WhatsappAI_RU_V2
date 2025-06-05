@@ -1,0 +1,20 @@
+.check {
+  display: flex;
+  gap: 70px;
+}
+
+.check__img {
+  object-fit: cover;
+  // max-height: 100%;
+  border-radius: 24px;
+}
+
+.check__wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.check__extra {
+
+}
