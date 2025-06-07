@@ -1,0 +1,12 @@
+.review-faq-wrapper {
+  padding-top: 80px;
+  background:
+    url('../img/bcg/faq-bcg1.webp') right 250px no-repeat,
+    url('../img/bcg/faq-bcg2.webp') left bottom no-repeat,
+    $bcg;
+
+      @media (max-width: $tablet-width) {
+  padding-top: 20px;
+  }
+}
+

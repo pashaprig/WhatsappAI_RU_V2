@@ -6,7 +6,7 @@ class App {
     this.showHide()
   }
 
-  constructor() {}
+  constructor() { }
 
   initMobileMenu() {
     const navMain = document.querySelector('.main-nav');
@@ -140,30 +140,32 @@ class App {
   initSlider() {
     $(function () {
       $('.slider').slick({
-        arrows: false,
-        slidesToShow: 3,
+        centerMode: true,
+        centerPadding: '450px',
+        slidesToShow: 1,
         responsive: [
           {
             breakpoint: 1024,
             settings: {
-              slidesToShow: 2,
-              dots: true,
+              slidesToShow: 1,
+              centerMode: true,
+              centerPadding: '30px',
             }
           },
           {
-            breakpoint: 480,
+            breakpoint: 768,
             settings: {
               slidesToShow: 1,
-              dots: true,
+              centerMode: false,
+              centerPadding: '0px',
             }
-          },
+          }
         ]
       });
-    })
+    });
   }
 
-
-    showHide() {
+  showHide() {
     document.querySelectorAll('.faq__container').forEach(container => {
       const button = container.querySelector('.faq__toggle-btn');
       const content = container.querySelector('.faq__dropdown-content');
