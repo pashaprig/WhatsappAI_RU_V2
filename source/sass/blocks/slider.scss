@@ -9,14 +9,6 @@
   min-width: 0;
 }
 
-.slick-slide.slick-active {
-  padding: 80px 24px;
-
-  @media (max-width: $tablet-width) {
-    padding: 24px;
-  }
-}
-
 /* Ограничивающая оболочка */
 .slick-list {
   overflow: hidden;
@@ -26,6 +18,12 @@
 .slick-track {
   display: flex;
   align-items: center;
+}
+
+.slider-about {
+  .slick-track {
+    align-items: start;
+  }
 }
 
 /* Стрілка */
