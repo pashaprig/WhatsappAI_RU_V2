@@ -22,6 +22,7 @@
 .review__card {
   box-sizing: border-box;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 30px;
   margin: 0 22px;
@@ -35,7 +36,6 @@
   }
 
   @media (max-width: $tablet-width) {
-    flex-direction: column;
     margin: 0 5px;
     height: 100%;
     &.slick-active {
