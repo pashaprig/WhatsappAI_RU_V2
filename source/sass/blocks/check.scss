@@ -62,6 +62,9 @@
 
   @media (max-width: $tablet-width) {
     overflow: auto;
+    scroll-snap-type: x mandatory;
+    scroll-padding-left: 20px;
+    -webkit-overflow-scrolling: touch;
   }
 }
 
@@ -74,6 +77,7 @@
   font-family: "Rubik", "Arial", sans-serif;
   color: $nav-hover;
   text-align: center;
+  scroll-snap-align: start;
 
   p {
     padding: 0 20px;

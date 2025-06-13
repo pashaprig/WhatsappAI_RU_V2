@@ -212,6 +212,34 @@
       </div>
     </section>
 
+    <section class="currency">
+      <div class="tabs">
+        <div class="tabs__top">
+          <h2 class="currency__heading heading">Доступные активы</h2>
+          <div class="tab__buttons">
+            <button class="tab__btn btn active" data-tab="tab1">Рынок криптовалют</button>
+            <button class="tab__btn btn" data-tab="tab2">Акции Европейских компаний</button>
+            <button class="tab__btn btn" data-tab="tab3">Акции Американских компаний</button>
+            <button class="tab__btn btn" data-tab="tab4">CFD</button>
+          </div>
+        </div>
+        <div class="tab__contents">
+          <div class="tab__content active" id="tab1">
+            <ul class="currency__list" id="currencyList">
+
+            </ul>
+          </div>
+          <div class="tab__content" id="tab2">
+            <ul class="currency__list" id="stockEuList">
+
+            </ul>
+          </div>
+          <div class="tab__content" id="tab3">Контент для таба 3</div>
+          <div class="tab__content" id="tab4">Контент для таба 4</div>
+        </div>
+      </div>
+    </section>
+
     <div class="review-faq-wrapper">
       <section class="review" id="review">
         <p class="extra">Отзывы</p>
@@ -442,7 +470,50 @@
     </div>
   </footer>
 
+  <template id="currencyCardTemplate">
+    <li class="currency__card">
+      <div class="currency__card-top">
+        <div class="currency__name-wrapper">
+          <p class="currency__name"></p>
+          <p class="currency__ticker"></p>
+        </div>
+        <div class="currency__arrow">
+          <svg width="18" height="18">
+            <use xlink:href="img/sprite.svg#arrow-up"></use>
+          </svg>
+        </div>
+      </div>
+      <div class="currency__card-bottom">
+        <div class="currency__wrapper">
+          <p class="currency__currency"></p>
+          <p class="currency__percent"></p>
+        </div>
+        <div class="currency__graph" data-chart-id="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="117" height="51" viewBox="0 0 117 51" fill="none">
+            <g filter="url(#filter0_f_24_259)">
+              <circle cx="107" cy="19.75" r="5" fill="#7FB800" />
+              <circle cx="107" cy="19.75" r="4.5" stroke="#7FB800" />
+            </g>
+            <path
+              d="M1 49.25L8.5 26.25L17 36.75L22 19.25L31 36.75L44.5 2.75L57.5 26.25L72 19.25L83.5 30.75L93.5 6.25L101 19.25H108"
+              stroke="#7FB800" stroke-width="2" stroke-linecap="round" />
+            <defs>
+              <filter id="filter0_f_24_259" x="97" y="9.75" width="20" height="20" filterUnits="userSpaceOnUse"
+                color-interpolation-filters="sRGB">
+                <feFlood flood-opacity="0" result="BackgroundImageFix" />
+                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
+                <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_24_259" />
+              </filter>
+            </defs>
+          </svg>
+        </div>
+      </div>
+    </li>
+  </template>
+
+
   <script src="js/jquery.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/apexcharts@3.35.3"></script>
   <script src="js/ion.rangeSlider.min.js"></script>
   <script src="js/slick.min.js"></script>
   <script src="js/script.js"></script>

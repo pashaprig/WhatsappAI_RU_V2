@@ -1,0 +1,47 @@
+.tabs {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+}
+
+.tabs__top {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  padding: 0 16px;
+
+  @media (max-width: $tablet-width) {
+    gap: 16px;
+  }
+}
+
+.tab__buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.tab__btn {
+  padding: 10px 20px;
+  color: $basic-black;
+  border-radius: 100px;
+  background: #fff;
+  box-shadow: 0px 5px 16px 0px rgba(8, 15, 52, 0.06);
+  transition: background 0.2s;
+
+  &:hover,
+  &.active {
+    color: $basic-white;
+    background: $main2-color;
+  }
+}
+
+.tab__content {
+  display: none;
+}
+
+.tab__content.active {
+  display: block;
+}
