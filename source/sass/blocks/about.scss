@@ -35,6 +35,14 @@
   }
 }
 
+.about__heading {
+  margin-bottom: 50px;
+
+  @media (max-width: $tablet-width) {
+    margin-bottom: 20px;
+  }
+}
+
 .about__wrapper {
   display: flex;
   align-items: center;
@@ -50,9 +58,9 @@
     flex-direction: column;
     height: unset;
 
-      & > * {
-    height: unset;
-  }
+    & > * {
+      height: unset;
+    }
   }
 }
 .slider-about {
@@ -112,6 +120,11 @@
     .about__check {
       width: 120px;
       height: 120px;
+      background: $basic-white;
+
+      svg {
+        fill: $main-color;
+      }
     }
   }
 

@@ -86,12 +86,17 @@ button {
 }
 
 .heading {
+  margin-bottom: 10px;
   font-family: "Rubik", "Arial", sans-serif;
   font-size: 60px;
   font-style: normal;
   font-weight: 700;
   line-height: 76px;
   color: $nav-hover;
+
+  span {
+    border-bottom: 6px solid $main-color;
+  }
 
   @media (max-width: $tablet-width) {
     font-size: 38px;
@@ -124,4 +129,19 @@ button {
   font-size: 17px;
   font-weight: 400;
   line-height: 26px;
+}
+
+.loader {
+  border: 6px solid #f3f3f3;
+  border-top: 6px solid $main-color;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  animation: spin 1s linear infinite;
+  margin: auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
 }

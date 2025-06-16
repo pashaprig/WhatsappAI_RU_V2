@@ -20,6 +20,7 @@
 .check__img {
   object-fit: cover;
   border-radius: 24px;
+  width: 50%;
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -31,6 +32,7 @@
   display: flex;
   flex-direction: column;
   gap: 12px;
+  width: 50%;
 
   @media (max-width: $tablet-width) {
     width: 100%;
@@ -59,12 +61,13 @@
   display: flex;
   gap: 36px;
   padding: 36px 0;
-
-  @media (max-width: $tablet-width) {
-    overflow: auto;
+      overflow: auto;
     scroll-snap-type: x mandatory;
     scroll-padding-left: 20px;
     -webkit-overflow-scrolling: touch;
+
+  @media (max-width: $tablet-width) {
+
   }
 }
 

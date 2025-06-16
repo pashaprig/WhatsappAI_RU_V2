@@ -61,7 +61,7 @@
   gap: 34px;
 
   @media (max-width: $tablet-width) {
-    margin-top: 25px;
+    margin-top: 50px;
     display: block;
 
     &--bottom {
@@ -73,8 +73,13 @@
 .main-nav__item {
   font-family: "Rubik", "Arial", sans-serif;
 
-  &--shadow {
-    display: none;
+  &--flex {
+    a {
+      display: flex;
+      align-items: center;
+      gap: 5px;
+      line-height: 24px;
+    }
   }
 
   a {
@@ -99,19 +104,6 @@
     width: 100%;
     min-height: 28px;
     margin-bottom: 30px;
-
-    &--shadow {
-      display: flex;
-      min-height: 10px;
-      margin-top: 50px;
-      box-shadow:
-        0px 0px 0px 0px rgba(222, 222, 222, 0.1),
-        0px 4px 10px 0px rgba(222, 222, 222, 0.1),
-        0px 18px 18px 0px rgba(222, 222, 222, 0.09),
-        0px 40px 24px 0px rgba(222, 222, 222, 0.05),
-        0px 71px 28px 0px rgba(222, 222, 222, 0.01),
-        0px 111px 31px 0px rgba(222, 222, 222, 0);
-    }
   }
 }
 
@@ -126,8 +118,8 @@
   padding: 6px 14px;
   border: 0;
   border-radius: 29px;
-  background: linear-gradient(334deg, #7FB800 -9.84%, #0F9B0F 121.28%);
-  box-shadow: 0px 4px 15px 0px rgba(127, 184, 0, 0.40);
+  background: linear-gradient(334deg, #7fb800 -9.84%, #0f9b0f 121.28%);
+  box-shadow: 0px 4px 15px 0px rgba(127, 184, 0, 0.4);
   cursor: pointer;
 
   @media (max-width: $tablet-width) {
@@ -144,7 +136,7 @@
   transform: translate(50%);
   width: 25px;
   height: 1px;
-      border-radius: 15px;
+  border-radius: 15px;
   background-color: $basic-white;
   box-shadow:
     0 4px 0 0 $basic-white,

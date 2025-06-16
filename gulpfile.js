@@ -179,6 +179,18 @@ const build = gulp.series(
 
 exports.build = build;
 
+// stylesNew
+
+const stylesnew = gulp.series(
+  clean,
+  copy,
+  gulp.parallel(
+    styles,
+  ),
+);
+
+exports.stylesnew = stylesnew;
+
 // Default
 
 exports.default = gulp.series(

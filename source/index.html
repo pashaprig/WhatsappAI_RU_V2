@@ -21,10 +21,14 @@
     <div class="header-promo-wrapper container">
       <header class="page-header ">
         <img width="226" height="24" class="page-header__img" src="img/img/logo.webp" alt="WHATSAPP AI">
-        <nav class="main-nav main-nav--closed main-nav--nojs">
+        <nav class="main-nav main-nav--closed">
           <ul class="main-nav__list">
-            <li class="main-nav__item main-nav__item--shadow"></li>
-            <li class="main-nav__item"><a href="#about">Про платформу</a></li>
+            <li class="main-nav__item main-nav__item--flex">
+              <a href="#about">
+                <img width="24" height="24" class="promo__wa-img" src="img/img/home.webp" alt="WHATSAPP">
+                Про платформу
+              </a>
+            </li>
             <li class="main-nav__item"><a href="#deals">Сделки в реальном времени</a></li>
             <li class="main-nav__item"><a href="#review">Отзывы</a></li>
             <li class="main-nav__item"><a href="#faq">Ответы на вопросы</a></li>
@@ -41,9 +45,7 @@
         <div class="promo__wrapper">
           <div class="promo__logo-wrapper rubik">
             <span class="promo__logo">
-              <svg width="40" height="40">
-                <use xlink:href="img/sprite.svg#wa"></use>
-              </svg>
+              <img width="40" height="40" class="promo__wa-img" src="img/img/wa.webp" alt="WHATSAPP">
             </span>
             <span>Official WhatsApp project</span>
           </div>
@@ -77,7 +79,7 @@
 
     <section class="about container">
       <p class="extra">Про платформу</p>
-      <h2 class="about__heading heading">Что такое WHATSAPP AI™?</h2>
+      <h2 class="about__heading heading">Что такое <span>WHATSAPP AI™?</span></h2>
       <div class="about__wrapper">
         <div class="about__text-wrapper">
           <h3 class="about__sub-heading heading">Это инновационная платформа, объединяющая автоматическую торговлю
@@ -148,7 +150,7 @@
     <section class="check container">
       <div class="check__text-wrapper mobile-only">
         <p class="extra">Почему стоит начать работать с WhatsApp&nbsp;AI?</p>
-        <h2 class="check__heading heading">Отслеживайте сделки в реальном времени</h2>
+        <h2 class="check__heading heading">Отслеживайте <span>сделки в реальном времени</span></h2>
         <p class="check__about">Наша эксклюзивная система <b>Скаут™</b> позволяет отслеживать каждую инвестицию и каждую
           прибыльную сделку в реальном времени.</p>
       </div>
@@ -156,7 +158,7 @@
       <div class="check__wrapper">
         <div class="check__text-wrapper  desktop-only">
           <p class="extra">Почему стоит начать работать с WhatsApp&nbsp;AI?</p>
-          <h2 class="check__heading heading">Отслеживайте сделки в реальном времени</h2>
+          <h2 class="check__heading heading">Отслеживайте <span>сделки в реальном времени</span></h2>
           <p class="check__about">Наша эксклюзивная система <b>Скаут™</b> позволяет отслеживать каждую инвестицию и
             каждую
             прибыльную сделку в реальном времени.</p>
@@ -226,16 +228,24 @@
         <div class="tab__contents">
           <div class="tab__content active" id="tab1">
             <ul class="currency__list" id="currencyList">
-
+              <div class="loader"></div>
             </ul>
           </div>
           <div class="tab__content" id="tab2">
             <ul class="currency__list" id="stockEuList">
-
+              <div class="loader"></div>
             </ul>
           </div>
-          <div class="tab__content" id="tab3">Контент для таба 3</div>
-          <div class="tab__content" id="tab4">Контент для таба 4</div>
+          <div class="tab__content" id="tab3">
+            <ul class="currency__list" id="stockUSAList">
+              <div class="loader"></div>
+            </ul>
+          </div>
+          <div class="tab__content" id="tab4">
+            <ul class="currency__list" id="stocCFDkList">
+              <div class="loader"></div>
+            </ul>
+          </div>
         </div>
       </div>
     </section>
@@ -489,23 +499,7 @@
           <p class="currency__percent"></p>
         </div>
         <div class="currency__graph" data-chart-id="">
-          <svg xmlns="http://www.w3.org/2000/svg" width="117" height="51" viewBox="0 0 117 51" fill="none">
-            <g filter="url(#filter0_f_24_259)">
-              <circle cx="107" cy="19.75" r="5" fill="#7FB800" />
-              <circle cx="107" cy="19.75" r="4.5" stroke="#7FB800" />
-            </g>
-            <path
-              d="M1 49.25L8.5 26.25L17 36.75L22 19.25L31 36.75L44.5 2.75L57.5 26.25L72 19.25L83.5 30.75L93.5 6.25L101 19.25H108"
-              stroke="#7FB800" stroke-width="2" stroke-linecap="round" />
-            <defs>
-              <filter id="filter0_f_24_259" x="97" y="9.75" width="20" height="20" filterUnits="userSpaceOnUse"
-                color-interpolation-filters="sRGB">
-                <feFlood flood-opacity="0" result="BackgroundImageFix" />
-                <feBlend mode="normal" in="SourceGraphic" in2="BackgroundImageFix" result="shape" />
-                <feGaussianBlur stdDeviation="2.5" result="effect1_foregroundBlur_24_259" />
-              </filter>
-            </defs>
-          </svg>
+          <div class="loader"></div>
         </div>
       </div>
     </li>
