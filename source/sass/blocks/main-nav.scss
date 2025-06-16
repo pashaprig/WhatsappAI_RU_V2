@@ -127,7 +127,6 @@
   }
 }
 
-// Бургер на css
 .main-nav--closed .main-nav__toggle::before {
   content: "";
   position: absolute;
@@ -159,14 +158,13 @@
   display: none;
 }
 
-//Крестик на css
 .main-nav--opened .main-nav__toggle {
   &::before,
   &::after {
     content: "";
     position: absolute;
     top: 50%;
-    left: 25%;
+    left: 23%;
     transform: translate(50%);
     width: 25px;
     height: 1px;

@@ -44,6 +44,10 @@
       color: $error;
     }
   }
+
+  @media (max-width: $tablet-width) {
+    min-width: 300px;
+  }
 }
 
 .currency__card-top {

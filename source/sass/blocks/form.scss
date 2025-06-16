@@ -54,7 +54,6 @@ input {
   }
 }
 
-
 .form_message.error.inactive {
   display: none;
 }
@@ -92,5 +91,13 @@ label.error {
 }
 
 .iti__country-name {
-    color: black;
+  color: black;
+}
+
+#phone1 {
+  padding-left: 87px !important;
+}
+
+.iti__selected-dial-code {
+  font-size: 15px;
 }
